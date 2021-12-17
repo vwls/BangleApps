@@ -2,10 +2,16 @@ let resolution = 6;
 let numberOfLines = 500;
 let randomSeed = Math.random(1) * 100;
 
+let d = new Date();
+let h = d.getHours();
+let m = d.getMinutes();
+
+let prevM = m;
+
 function draw() {
 	// Set up the time object
-	let d = new Date();
-	let h = d.getHours(), m = d.getMinutes();
+	d = new Date();
+	h = d.getHours(), m = d.getMinutes();
 	let time = h + ":" + ("0"+m).substr(-2);
 
 	// Reset the state of the graphics library
@@ -21,6 +27,10 @@ function draw() {
 	// Set stroke color
 	g.setColor(255, 255, 255);
 
+	if(prevM != m){
+		randomSeed = Math.random(1) * 100;
+	}
+
 	// Draw some cool lines
 	for(let i = 0; i < numberOfLines; i+=resolution){
 		g.drawLine(randomSeed, i, i, 100);
@@ -31,6 +41,8 @@ function draw() {
 
 	// Display time on screen
 	g.drawString(time, 50, 35);
+
+	prevM = m;
 }
 
 // Call the draw function every 1 second
