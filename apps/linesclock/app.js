@@ -12,6 +12,7 @@ function draw() {
 	// Set up the time object
 	d = new Date();
 	h = d.getHours(), m = d.getMinutes();
+	m = d.getMinutes();
 	let time = h + ":" + ("0"+m).substr(-2);
 
 	// Reset the state of the graphics library
@@ -26,7 +27,8 @@ function draw() {
 
 	// Set stroke color
 	g.setColor(255, 255, 255);
-
+	
+	// Get a new random number every minute
 	if(prevM != m){
 		randomSeed = Math.random(1) * 100;
 	}
