@@ -6,7 +6,7 @@ function draw() {
 	// Set up the time object
 	let d = new Date();
 	let h = d.getHours(), m = d.getMinutes();
-	let time = h + ":" + ("0"+m).subtr(-2);
+	let time = h + ":" + ("0"+m).substr(-2);
 
 	// Reset the state of the graphics library
 	g.reset();
@@ -23,7 +23,7 @@ function draw() {
 
 	// Draw some cool lines
 	for(let i = 0; i < numberOfLines; i+=resolution){
-		g.drawLines(randomSeed, i, i, 100);
+		g.drawLine(randomSeed, i, i, 100);
 	}
 
 	// Set font type and size
