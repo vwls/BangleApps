@@ -5006,6 +5006,19 @@
       {"name":"lapcounter.img","url":"app-icon.js","evaluate":true}
     ]
   },
+  { "id": "linesclock",
+    "name": "Generative Lines Clock",
+    "shortName":"Generative lines clock",
+    "icon": "app.png",
+    "version":"0.01",
+    "description": "Simple generative lines clock",
+    "tags": "",
+    "supports": ["BANGLEJS", "BANGLEJS2"],
+    "storage": [
+      {"name":"linesclock.app.js","url":"app.js"},
+      {"name":"appicon.png","url":"app-icon.js","evaluate":true}
+  ]
+  },
   { "id": "circlesclock",
       "name": "Circles clock",
       "shortName":"Circles clock",
