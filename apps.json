@@ -5009,15 +5009,15 @@
   { "id": "linesclock",
     "name": "Generative Lines Clock",
     "shortName":"Generative lines clock",
-    "icon": "app.png",
+    "icon": "appicon.png",
     "version":"0.01",
     "description": "Simple generative lines clock",
-    "tags": "",
+    "tags": "clock",
     "supports": ["BANGLEJS", "BANGLEJS2"],
     "storage": [
       {"name":"linesclock.app.js","url":"app.js"},
       {"name":"appicon.png","url":"app-icon.js","evaluate":true}
-  ]
+    ]
   },
   { "id": "circlesclock",
       "name": "Circles clock",
